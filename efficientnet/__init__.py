@@ -40,7 +40,7 @@ def inject_keras_modules(func):
         kwargs['backend'] = keras.backend
         kwargs['layers'] = keras.layers
         kwargs['models'] = keras.models
-        kwargs['utils'] = keras.utils
+        kwargs['utils'] = tf.keras
         return func(*args, **kwargs)
 
     return wrapper
